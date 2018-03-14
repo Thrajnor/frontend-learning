@@ -1,9 +1,4 @@
 /*Start vars*/
-var rgb;
-var difficulty = 3;
-var winBox = boxes[0];
-var document;
-var i;
 var easy = document.getElementById("easy");
 var hard = document.getElementById("hard");
 var header = document.getElementById("header");
@@ -17,6 +12,11 @@ var hardBoxes = [
 var span = [
     document.querySelector("#easy"), document.querySelector("#hard")
 ];
+var rgb;
+var difficulty = 3;
+var winBox = boxes[0];
+var document;
+var i;
 
 /*End vars*/
 
@@ -45,15 +45,15 @@ function correct() {
     }
 }
 
-function anyRgb() {
-    "use strict";
-    var temp = "RGB(" + rnum() + ", " + rnum() + ", " + rnum() + ")";
-    return temp;
-}
-
 function rnum() {
     "use strict";
     var temp = Math.floor(Math.random() * 255);
+    return temp;
+}
+
+function anyRgb() {
+    "use strict";
+    var temp = "RGB(" + rnum() + ", " + rnum() + ", " + rnum() + ")";
     return temp;
 }
 
@@ -69,9 +69,17 @@ function setupDifficultyBtn() {
             this.classList.add("active");
             easy.classList.remove("active");
             hard.classList.remove("active");
-            this.textContent === "EASY" ? difficulty = 3: difficulty = 6;
+            if (this.textContent === "EASY") {
+                difficulty = 3;
+            } else {
+                difficulty = 6;
+            }
             for (i = 0; i < hardBoxes.length; i += 1) {
-                this.textContent === "EASY" ? hardBoxes[i].classList.add("hidden"): hardBoxes[i].classList.remove("hidden");
+                if (this.textContent === "EASY") {
+                    hardBoxes[i].classList.add("hidden");
+                } else {
+                    hardBoxes[i].classList.remove("hidden");
+                }
             }
         });
     }
