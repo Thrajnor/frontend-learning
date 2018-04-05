@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 20px;
+    font-family: "Josefin Slab", serif;
+}
+.main-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+section:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+/*end common*/
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(img/header-bg.jpg) no-repeat center;
+    background-size:cover; 
+    float: right;
+    transition: width .5s;
+}
+header div.center-text {
+    width: 80%;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    text-align: center;
+    text-transform: uppercase;
+}
+header div.center-text h1 {
+    font-size: 300%;
+    margin-bottom: 2%;
+    color: #fff;
+}
+header div.center-text p {
+    font-size: 150%;
+    color: #eee;
+    margin-bottom: 3%;
+}
+header div.center-text a {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 1% 2%;
+    border-radius: 20px;
+    margin-right: 1%;
+    transition: background .5s;
+}
+header div.center-text a:hover {
+    background-color: #555;
+}
+header label i.fa-ellipsis-v {
+    font-size: 150%;
+    color: #fff ;
+    padding: 10px
+}
+header label i.fa-ellipsis-v:hover {
+    background: #ccc;
+}
+header nav.header-nav {
+    position: absolute;
+    top: 0%;
+    opacity: 1;
+    width: 20%;
+    height: 100vh;
+    background: #e6e9fa;
+    left: -20%;
+    transition: .5s;
+}
+header nav.header-nav ul {
+    margin-top: 10%;
+}
+header nav.header-nav ul li {
+    margin-bottom: 5%;
+    border-bottom: 1px solid #c2dde6;
+    padding-left: 5%
+}
+header nav.header-nav ul li a{
+    display: inline-block;
+    padding: 5% 0 0 3%;
+    border-top: 2px solid transparent;
+    color: #777;
+    width: 80%;
+    transition: color .2s, border-top .2s
+}
+header nav.header-nav ul li a:hover {
+    color: #333;
+    border-top: 2px solid #333;
+}
+input#nav-control:checked ~ div.header-clear header {
+    width: 80%;
+}
+input#nav-control:checked ~ div.header-clear header nav.header-nav {
+    left: 0;
+}
+div.header-clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/*end header*/
+section.section1 {
+    height: auto;
+    width: 90%;
+    margin: auto;
+}
+section.section1 h2 {
+    text-align: center;
+    margin: 4% 0 2% 0;
+    color: #555;
+}
+section.section1 figure {
+    margin: 1%;
+    position: relative;
+    width: 31.3333%;
+    float: left;
+    overflow: hidden;
+}
+section.section1 figure figcaption {
+    position: absolute;
+    top: 0;
+    font-weight: bolder;
+    color: #fff;
+    background: linear-gradient(to right, #333, #aaa);
+}
+section.section1 figure img {
+    width: 100%;
+    margin: 0;
+    opacity: .8;
+    transform: scale(1.09,1.09);
+    transition: transform .5s, opacity .5s;
+}
+section.section1 figure img:hover {
+    transform: scale(1.3,1.3);
+    opacity: 1;
+}
+section.second figure figcaption {
+    position: relative;
+    background: none;
+    text-align: center;
+    color: #555;
+}
+section.second figure img {
+    width: 100%;
+    margin: 0;
+    opacity: .8%;
+    transform: scale(.7,.7);
+}
+section.second figure img:hover {
+    transform: scale(1,1);
+}
+/*end Images section*/
+section.ourteam {
+    width: 90%;
+    margin: 3% auto;
+    overflow: hidden;
+}
+section.ourteam h1 {
+    text-align: center;
+    margin-bottom: 2%;
+    color: #555;
+}
+section.ourteam div.column {
+    width: 31.3333%;
+    float: left;
+    margin: 0 1%;
+}
+section.ourteam div.column img {
+    opacity: 1;
+    width: 100%;
+    display: block;
+    margin: auto;
+    transition: opacity .4s;
+}
+section.ourteam div.column img:hover {
+    opacity: .9;
+    
+}
+section.ourteam div.column details summary {
+    font-weight: bolder;
+    font-size: 120%;
+    padding: 2% 0;
+    color: #555;
+}
+section.ourteam div.column details p {
+    text-align: justify;
+    text-indent: 3%
+}
+
+
+

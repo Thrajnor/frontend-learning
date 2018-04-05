@@ -1,0 +1,333 @@
+/*common style*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 20px;
+    font-family: "EB Garamond", serif;
+    background: #ccc;
+}
+.wrapper {
+    width: 100%;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+section:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+/*end common style*/
+header {
+    background: #111;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+header div.logo {
+    width: 50%;
+    float: left;
+}
+header nav {
+    width: 50%;
+    float: right;
+}
+header div.logo h1 {
+    text-align: center;
+    font-size: 170%;
+    margin: 1%
+}
+header div.logo h1 #span1 {
+    color: #ff7f50;
+    font-style: italic;
+}
+header div.logo h1 #span2 {
+    color: #ccc;
+}
+header nav ul li a {
+    color: #aaa;
+}
+header nav ul {
+    width: 100%;
+    margin: 2% auto;
+    text-align: center;
+}
+header nav ul li {
+    margin-left: 5%;
+    display: inline;
+}
+header nav ul li a:hover {
+    color: #fff;
+}
+header nav ul li a.active {
+    border-bottom: 1px solid #aaa;
+}
+/*header end*/
+/*section*/
+section.section1 {
+    position: relative;
+    min-height: 600px;
+    background: url(images/bg.jpg) no-repeat 30% 10%;
+}
+section.section1 h2 {
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    text-align: center;
+    color: #ff7f50;
+    font-size: 300%;
+}
+/*end 1 section*/
+
+section.section2 {
+    background: #000;
+}
+section.section2 form {
+    text-align: center;
+}
+section.section2 form input {
+    padding: 5px 10px;
+    margin: 2% 0;
+    font-size: 90%
+}
+section.section2 form input[type="email"] {
+    background: #ccc;
+}
+section.section2 form input[type="email"]:focus {
+    background: #eee;
+}
+section.section2 form input[type="submit"] {
+    background: #ff7f50;
+    color: #333;
+}
+section.section2 form input[type="submit"]:hover {
+    background: #dd4d20;
+}
+/*End 2 section*/
+section.section3 img {
+    width: 50%;
+    float: left;
+    padding: 5% 0;
+    background: #ccc;
+}
+/*End 3 section*/
+footer{
+    background: #000;
+}
+footer p{
+    text-align: center;
+    color: aliceblue;
+    padding: 2% 0;
+    font-style: italic;
+    font size: 140%;
+}
+/*End footer*/
+
+section.aboutus {
+    padding: 3% 0;
+}
+section.aboutus h2 {
+    text-align: center;
+    margin-bottom: 3%;
+    color: #555;
+}
+section.aboutus div {
+    width: 33.3333333333333333333%;
+    float: left;
+}
+section.aboutus div img {
+    width: 50%;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+}
+section.aboutus div p {
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+    text-indent: 15px;
+    color: #333;
+    font-style: italic;
+}
+section.aboutus p::first-letter {
+    font-size: 200%;
+}
+/*start services*/
+section.services {
+    max-width: 1200px;
+    margin: auto;
+}
+section.services div {
+    width: 27.3333%;
+    max-width: 350px;
+    min-height: 300px;
+    margin: 2%;
+    float: left;
+    background: #eee;
+    padding: 1%;
+    border-radius: 15px;
+}
+section.services div h2 {
+    text-align: center;
+    margin-bottom: 3px;
+    color: #fff;
+    border-radius: 10px;
+}
+section.services div p {
+    text-align: center;
+    font-size: 110%;
+    border-radius: 10px;
+    color: #fff;
+    font-style: italic;
+}
+section.services div ul {
+    width: 90%;
+    margin: 3% auto;
+    color: #555;
+}
+section.services div ul li:before {
+    content: url(images/check.png);
+    margin-right: 5px;
+}
+section.services div h3 {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+}
+section.services div.starter h2,
+section.services div.starter p,
+section.services div.starter h3 {
+    background: #555;
+}
+
+section.services div.enhanced h2,
+section.services div.enhanced p,
+section.services div.enhanced h3 {
+    background: #333;
+}
+
+section.services div.standard h2,
+section.services div.standard p,
+section.services div.standard h3 {
+    background: #555;
+}
+/*End services*/
+/*responsive*/
+@media only screen and (max-width:600px) {
+    body {
+        font-size: 17px;
+    }
+    header div.logo {
+        width: 100%;
+        float: none;
+    }
+    header nav {
+        width: 100%;
+        float: none;
+    }
+    header nav ul li:first-child {
+        margin-left: 0;
+    }
+/*    end navigation*/
+    section.section2 form input {
+        padding: 2px 4px;
+    }
+/*    end section 2*/
+    section.section3 img {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+/*    end section 3*/
+    footer p {
+        font-size: 120%;
+    }
+/*    end footer*/
+/*    end home*/
+    
+    section.aboutus div {
+        width: 100%;
+        float: none;
+    }
+    section.aboutus div img {
+        width: 90%;
+        margin: 8% auto 2% auto;
+    }
+    section.aboutus div p {
+        width: 90%
+    }
+/*    end about us*/
+    section.services div {
+        width: 90%;
+        margin: 4% auto 2% auto;
+        float: none;
+    }
+/*    end services*/
+}
+@media only screen and (max-width:1000px) and (min-width:600px) {
+    header nav ul li:first-child {
+        margin-left: 0%;
+    }
+    section.aboutus {
+        padding: 5% 0;
+    }
+    section.aboutus div img {
+        width: 90%;
+    }
+    section.aboutus div p {
+        width: 90%
+    }
+    section.services div {
+        width: 31.333%;
+        margin: 1%;
+        padding: 0;
+    }
+    section.services div ul {
+        width:100%;
+    }
+    
+/*    start "padding" for services*/
+    section.services div.starter h2,
+    section.services div.starter p,
+    section.services div.starter ul li {
+        margin: 3px;
+    }
+   
+    section.services div.enhanced h2,
+    section.services div.enhanced p,
+    section.services div.enhanced ul li {
+        margin: 3px;
+    }
+   
+    section.services div.standard h2,
+    section.services div.standard p,
+    section.services div.standard ul li {
+        margin: 3px;
+    }
+    section.services div.starter h3,
+    section.services div.enhanced h3,
+    section.services div.standard h3 {
+        margin: 0px auto 3px auto;
+    } 
+/*    end "padding" for services*/
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
