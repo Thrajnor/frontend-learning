@@ -1,0 +1,161 @@
+body {
+    background: #212121;
+    color: snow;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+/*Start Header*/
+#header {
+    background: #a07113;
+    padding: 2%;
+    transition: background .5s;
+}
+#header h1 {
+    font-size: 2.5em;
+    padding: .5%;
+}
+#header h2 {
+    font-weight: 600;
+}
+/*End Header*/
+/*Start UI*/
+#ui {
+    background: white;
+    color: black;
+    font-family: 'Rammetto One', cursive;
+}
+#ui h3{
+    width: 50%;
+    margin: auto;
+    font-size: 1em;
+}
+#ui h3 span{
+    transition: background .2s;
+    user-select: none;
+    transition: .5s;
+}
+#ui span:hover {
+    background: #a07113;
+    cursor: pointer;
+}
+#ui h3 #newColor {
+    text-align: left;
+    float: left;
+    margin-left: 3%
+}
+#ui h3 #easy {
+    margin-right: 3%;
+    float: right;
+}
+#ui h3 #hard {
+    margin-right: 3%;
+    float: right;
+}
+#ui h3 #tryAgain {
+    cursor: text;
+    font-weight: 100;
+}
+#ui h3 #tryAgain:hover {
+    background: white;
+    cursor: default;
+}
+/*End UI*/
+/*Start table*/
+#colorBox {
+    width: 50%;
+    margin: 2% auto 2%;
+}
+#colorBox div {
+    border-radius: 25%;
+    background: white;
+    width: 25.333333333%;
+    float: left;
+    margin: 4%;
+    transition: transform .5s, opacity .5s, background .5s;
+}
+#colorBox div:after {
+    display: block;
+    content: "";
+    padding-bottom: 100%;
+}
+#colorBox div:hover {
+    opacity: .9;
+    transform: scale(1.1,1.1);
+}
+/*End table*/
+/*Start Classes JS*/
+.active {
+    background: #a07113;
+}
+#colorBox .hidden {
+    opacity: 0;
+}
+#colorBox .hidden:hover {
+    opacity: 0;
+}
+.textHidden {
+    font-size: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.big {
+    transform: scale(1.4, 1.4);
+}
+#colorBox .big:hover {
+    transform: scale(1.5, 1.5);
+}
+/*End Classes JS*/
+
+@media only screen and (max-width:1025px) and (min-width:770px) {
+    #ui h3{
+        width: 65%;
+        font-size: .95em
+    }
+    #colorBox {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width:769px) and (min-width:480px) {
+    #ui h3{
+        width: 80%;
+        font-size: .9em;
+    }
+    #colorBox {
+        width: 80%;
+    }
+}
+@media only screen and (max-width:479px) {
+    #header {
+        padding-bottom: 6%;
+    }
+    #header h1 {
+        font-size: 1.8em;
+    }
+    #header h2 {
+        font-size: 1.2em;
+    }
+    #ui h3{
+        width: 90%;
+        font-size: .8em;
+    }
+    #ui h3 #tryAgain {
+        top: -19px;
+        position: relative;
+        margin-right: -100%;
+        margin-left: -100%; 
+    }
+    #colorBox {
+        width: 90%;
+    }
+    #easy {
+        display: inline;
+        position: relative;
+    }
+}
