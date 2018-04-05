@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Animations</title>
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                background: red;
+                position: relative;
+/*
+                animation-name: example;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-delay: 2s;
+*/
+                animation: example 4s infinite 2s;
+            }
+            @keyframes example {
+                0% {
+                    left: 0px;
+                    top: 0px;
+                    transform: rotateZ(0deg);
+                }
+                25% {
+                    left: 400px;
+                    top: 0px;
+                    transform: rotateZ(90deg);
+                }
+                50% {
+                    left: 400px;
+                    top: 400px;
+                    transform: rotateZ(180deg);
+                }
+                75% {
+                    left: 0px;
+                    top: 400px;
+                    transform: rotateZ(270deg);
+                }
+                100% {
+                    left: 0px;
+                    top: 0px;
+                    transform: rotateZ(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
