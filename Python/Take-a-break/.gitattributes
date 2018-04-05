@@ -1,6 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-HEAD
 
 # Custom for Visual Studio
 *.cs     diff=csharp
@@ -16,5 +15,3 @@ HEAD
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
-HTML-CSS-learning/master
-Python/master
