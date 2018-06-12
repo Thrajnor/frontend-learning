@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Marcin",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.9.0"
+  },
+  "dependencies": {
+    "hoek": "^5.0.3"
   }
 }
